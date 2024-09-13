@@ -2,26 +2,79 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Light theme (default) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f5f3f0;
+  --foreground: #0f0e0b;
+  --primary: #8c7a6b;
+  --secondary: #a69885;
+  --accent: #c9b89d;
+  --highlight: #e6dfd4;
+  --muted: #e8e5e0;
+  --cta: #e8a87c;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Dark theme */
+.dark {
+  --background: #0f0e0b;
+  --foreground: #f5f3f0;
+  --primary: #d2c3a8;
+  --secondary: #a69885;
+  --accent: #8c7a6b;
+  --highlight: #3d3a36;
+  --muted: #3d3a36;
+  --cta: #e8a87c;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Playfair Display", serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@layer base {
+  h1 {
+    @apply text-4xl font-bold leading-tight;
+  }
+  h2 {
+    @apply text-3xl font-semibold leading-snug;
+  }
+  h3 {
+    @apply text-2xl font-medium leading-normal;
+  }
+  h4 {
+    @apply text-xl font-medium leading-normal;
+  }
+  h5 {
+    @apply text-lg font-medium leading-normal;
+  }
+  h6 {
+    @apply text-base font-medium leading-normal;
+  }
+  p {
+    @apply text-base font-normal leading-relaxed;
+  }
+  a {
+    @apply text-base font-medium;
+  }
+  ul,
+  ol {
+    @apply text-base leading-relaxed list-inside;
+  }
+  li {
+    @apply mb-2;
+  }
+  blockquote {
+    @apply text-lg italic font-medium leading-relaxed;
+  }
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
