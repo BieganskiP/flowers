@@ -33,13 +33,13 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-background text-primary py-4 border-b-2 border-accent">
+    <header className="bg-background text-primary px-4 md:px-0 py-4 border-b-2 border-accent">
       <div className="max-w-[1280px] mx-auto flex justify-between items-center">
         <Link href="/" className="text-xl font-bold">
           Kwiaciarnia Wiosenna
         </Link>
         <div className="flex items-center justify-center">
-          <nav className="flex items-center justify-center">
+          <nav className="items-center justify-center hidden md:flex">
             <ul className="flex items-center justify-center space-x-6 mr-6">
               <li className="m-0">
                 <Link
