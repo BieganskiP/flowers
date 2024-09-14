@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { FaSun, FaMoon } from "react-icons/fa";
 
-const Header: React.FC = () => {
+export default function Header() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
@@ -33,39 +33,48 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="bg-background text-primary py-2 border-b-2 border-accent">
-      <div className="max-w-[1280px] mx-auto px-4 flex justify-between items-center">
+    <header className="bg-background text-primary py-4 border-b-2 border-accent">
+      <div className="max-w-[1280px] mx-auto flex justify-between items-center">
         <Link href="/" className="text-xl font-bold">
           Kwiaciarnia Wiosenna
         </Link>
-        <nav className="flex items-center">
-          <ul className="flex space-x-4 mr-4">
-            <li>
-              <Link href="/" className="hover:text-accent text-sm">
-                Strona główna
-              </Link>
-            </li>
-            <li>
-              <Link href="/oferta" className="hover:text-accent text-sm">
-                Oferta
-              </Link>
-            </li>
-            <li>
-              <Link href="/kontakt" className="hover:text-accent text-sm">
-                Kontakt
-              </Link>
-            </li>
-          </ul>
+        <div className="flex items-center justify-center">
+          <nav className="flex items-center justify-center">
+            <ul className="flex items-center justify-center space-x-6 mr-6">
+              <li className="m-0">
+                <Link
+                  href="/"
+                  className="hover:text-accent text-base flex items-center"
+                >
+                  Strona główna
+                </Link>
+              </li>
+              <li className="m-0">
+                <Link
+                  href="/oferta"
+                  className="hover:text-accent text-base flex items-center"
+                >
+                  Oferta
+                </Link>
+              </li>
+              <li className="m-0">
+                <Link
+                  href="/kontakt"
+                  className="hover:text-accent text-base flex items-center"
+                >
+                  Kontakt
+                </Link>
+              </li>
+            </ul>
+          </nav>
           <button
             onClick={toggleDarkMode}
             className="p-2 rounded-full bg-accent text-background hover:bg-primary transition-colors duration-200"
           >
             {isDarkMode ? <FaSun size={18} /> : <FaMoon size={18} />}
           </button>
-        </nav>
+        </div>
       </div>
     </header>
   );
-};
-
-export default Header;
+}

@@ -6,30 +6,30 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="flex-grow w-full max-w-[1280px] mx-auto text-foreground">
+      <main className="flex-grow w-full  mx-auto text-foreground">
         <div className="flex flex-col w-full">
           <FlowerCard
             image="https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             text="Okazyjne"
-            href="/okazyjne"
+            href="/oferta/okazyjne"
             direction="right"
           />
           <FlowerCard
             image="https://images.pexels.com/photos/2741479/pexels-photo-2741479.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             text="Na co dzień"
-            href="/na-co-dzien"
+            href="/oferta/na-co-dzien"
             direction="left"
           />
           <FlowerCard
             image="https://images.pexels.com/photos/931177/pexels-photo-931177.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             text="Dla bliskich"
-            href="/dla-bliskich"
+            href="/oferta/dla-bliskich"
             direction="right"
           />
           <FlowerCard
             image="https://images.pexels.com/photos/2741479/pexels-photo-2741479.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             text="Artystyczne"
-            href="/artystyczne"
+            href="/oferta/artystyczne"
             direction="left"
           />
         </div>
