@@ -141,5 +141,4 @@ function Flower1Svg({ className }: { className?: string }) {
   );
 }
 
-
-export { Flower1Svg  };
+export { Flower1Svg };

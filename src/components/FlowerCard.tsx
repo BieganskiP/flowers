@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Flower1Svg } from "@/assets/flower";
+import { Flower1Svg } from "@/assets/Flower";
 
 interface FlowerCardProps {
   image: string;
